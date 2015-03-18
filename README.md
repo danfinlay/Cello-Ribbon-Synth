@@ -1,4 +1,5 @@
-Inspired by the [Arduino ribbon synth](https://github.com/flyswatter/Arduino-ribbon-synth).
+# Cello Ribbon Synth
+## Inspired by the [Arduino ribbon synth](https://github.com/flyswatter/Arduino-ribbon-synth).
 
 Instead of using drum-pads as the pluck-system like on the guitar, this project is dedicated to making a bowed instrument using the same type of softpot sliders.
 
