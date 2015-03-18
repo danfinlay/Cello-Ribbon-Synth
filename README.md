@@ -11,4 +11,4 @@ Uses [softpot sliders](http://bildr.org/2012/11/touch-sliders-with-a-softpot-ard
 
 To use an Arduino micro as its own usb midi device, I'm using [AVCore](https://github.com/rkistner/arcore), a fork of the Arduino core libraries that includes MIDI output support.
 
-
+I did a [rough cut of the schematics on 123dCircuits](http://123d.circuits.io/circuits/646512-arduino-ribbon-synth/edit#pcb), which in theory could allow printing PCBs at some point.
