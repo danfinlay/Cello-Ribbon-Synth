@@ -22,20 +22,32 @@ void noteOff(byte channel, byte pitch, byte velocity) {
 void controlChange(byte channel, byte control, byte value) {
   MIDIEvent event = {0x0B, 0xB0 | channel, control, value};
   MIDIUSB.write(event);
+  MIDIUSB.flush();
 }
 
-void loop() {
-  noteOn(0, 48, 64);   // Channel 0, middle C, normal velocity
-  MIDIUSB.flush();
-  delay(500);
-
-  noteOff(0, 48, 64);  // Channel 0, middle C, normal velocity
-  MIDIUSB.flush();
-  delay(1500);
-
-  // controlChange(0, 10, 65); // Set the value of controller 10 on channel 0 to 65
-}
+li
 
 void setup() {
 
 }
+
+void loop() {
+  
+  
+  noteOn(0, 48, 64);   // Channel 0, middle C, normal velocity
+  delay(500);
+
+  noteOff(0, 48, 64);  // Channel 0, middle C, normal velocity
+  delay(1500);
+  
+  sensorValue = analogRead(analogInPin);
+  // map it to the range of the analog out:
+  outputValue = map(sensorValue, 0, 1023, 0, 255);
+  // change the analog out value:
+  analogWrite(analogOutPin, outputValue);
+
+  // controlChange(0, 10, 65); // Set the value of controller 10 on channel 0 to 65
+  
+  
+}
+
