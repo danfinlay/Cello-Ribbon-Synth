@@ -5,14 +5,14 @@ enc_body_radius = 20;
 enc_body_length = 38;
 
 // Shaft parameters
-enc_shaft_radius = 4;
+enc_shaft_radius = 10.25;
 enc_shaft_length = 12;
 
 // Mount screw parameters:
 enc_screw_count = 3;
 enc_screw_distance_from_center = 15.28;
 enc_screw_depth = 20;
-enc_screw_radius = 2;
+enc_screw_radius = 2.2;
 
 // Mount plate parameters:
 mount_plate_depth = 3;
