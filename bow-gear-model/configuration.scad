@@ -15,7 +15,7 @@ enc_screw_depth = 20;
 enc_screw_radius = 2;
 
 // Mount plate parameters:
-mount_plate_depth = 5;
+mount_plate_depth = 3;
 mount_base_screw_diameter = 3;
 mount_base_screw_distance = 15;
 
