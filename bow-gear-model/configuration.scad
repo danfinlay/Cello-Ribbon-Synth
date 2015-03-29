@@ -3,9 +3,10 @@
 // Main body size:
 enc_body_radius = 20;
 enc_body_length = 38;
+enc_side_wire_radius = 7;
 
 // Shaft parameters
-enc_shaft_radius = 10.25;
+enc_shaft_radius = 11;
 enc_shaft_length = 12;
 
 // Mount screw parameters:

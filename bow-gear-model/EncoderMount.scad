@@ -33,8 +33,13 @@ module mountScrews(){
     cylinder(r=mount_base_screw_diameter, h=mount_plate_depth*2);
 
   // Wire Hole:
-  enc_side_wire_radius = 7;
   translate([enc_body_radius - mount_plate_depth, 0, enc_side_wire_radius])
+    rotate([0,90,0])
+      cylinder(r=enc_side_wire_radius, h=mount_plate_depth*4);
+  translate([enc_body_radius - mount_plate_depth, -enc_side_wire_radius, enc_side_wire_radius])
+    rotate([0,90,0])
+      cube([enc_side_wire_radius*2, enc_side_wire_radius*2, enc_side_wire_radius*2]);
+  translate([enc_body_radius - mount_plate_depth, 0, -enc_side_wire_radius])
     rotate([0,90,0])
       cylinder(r=enc_side_wire_radius, h=mount_plate_depth*4);
 }
