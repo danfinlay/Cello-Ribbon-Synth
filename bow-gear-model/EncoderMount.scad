@@ -24,11 +24,11 @@ module mountScrews(){
       cylinder(r=mount_base_screw_diameter, h=mount_plate_depth*2);
 
   // Front screw holes
-  translate([enc_body_radius, enc_screw_distance_from_center, enc_body_length + mount_base_screw_distance])
+  translate([enc_body_radius, enc_screw_distance_from_center, enc_body_length + mount_base_screw_distance * 1.8])
     rotate([0,90,0])
       cylinder(r=mount_base_screw_diameter, h=mount_plate_depth*2);
 
-  translate([enc_body_radius, -enc_screw_distance_from_center, enc_body_length + mount_base_screw_distance])
+  translate([enc_body_radius, -enc_screw_distance_from_center, enc_body_length + mount_base_screw_distance * 1.8])
       rotate([0,90,0])
         cylinder(r=mount_base_screw_diameter, h=mount_plate_depth*2);
 }
