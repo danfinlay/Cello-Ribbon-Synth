@@ -20,7 +20,7 @@
 
 // tuneable constants
 axel_length = 7; // Length of end nub for connecting to idler.
-axel_radius = 4; // Hub of idler bearing (608zz is 4).
+axel_radius = 3.85; // Hub of idler bearing (608zz is 4).
 motor_shaft_length = 12;
 
 teeth = 13;			// Number of teeth, standard Mendel T5 belt = 8, gives Outside Diameter of 11.88mm
@@ -29,15 +29,15 @@ profile = 6;		// 1=MXL 2=40DP 3=XL 4=H 5=T2.5 6=T5 7=T10 8=AT5 9=HTD_3mm 10=HTD_
 motor_shaft = 7.15;	// NEMA17 motor shaft exact diameter = 5
 m3_dia = 3.2;		// 3mm hole diameter
 m3_nut_hex = 1;		// 1 for hex, 0 for square nut
-m3_nut_flats = 6;	// normal M3 hex nut exact width = 5.5, m4 is about 7
-m3_nut_depth = 3.0;	// normal M3 hex nut exact depth = 2.4, nyloc = 4
+m3_nut_flats = 5.8;	// normal M3 hex nut exact width = 5.5, m4 is about 7
+m3_nut_depth = 2.7;	// normal M3 hex nut exact depth = 2.4, nyloc = 4
 
 retainer = 0;		// Belt retainer above teeth, 0 = No, 1 = Yes
 retainer_ht = 1.5;	// height of retainer flange over pulley, standard = 1.5
 idler = 0;			// Belt retainer below teeth, 0 = No, 1 = Yes
 idler_ht = 1.5;		// height of idler flange over pulley, standard = 1.5
 
-pulley_t_ht = 24;	// length of toothed part of pulley, standard = 12
+pulley_t_ht = 80;	// length of toothed part of pulley, standard = 12
 pulley_b_ht = 8;		// pulley base height, standard = 8. Set to same as idler_ht if you want an idler but no pulley.
 pulley_b_dia = 21;	// pulley base diameter, standard = 20
 no_of_nuts = 1;		// number of captive nuts required, standard = 1
