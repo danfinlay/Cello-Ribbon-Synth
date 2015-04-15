@@ -19,6 +19,7 @@
 
 
 // tuneable constants
+axel = false;
 axel_length = 7; // Length of end nub for connecting to idler.
 axel_radius = 3.85; // Hub of idler bearing (608zz is 4).
 motor_shaft_length = 12;
@@ -29,15 +30,19 @@ profile = 6;		// 1=MXL 2=40DP 3=XL 4=H 5=T2.5 6=T5 7=T10 8=AT5 9=HTD_3mm 10=HTD_
 motor_shaft = 7.15;	// NEMA17 motor shaft exact diameter = 5
 m3_dia = 3.2;		// 3mm hole diameter
 m3_nut_hex = 1;		// 1 for hex, 0 for square nut
-m3_nut_flats = 5.8;	// normal M3 hex nut exact width = 5.5, m4 is about 7
-m3_nut_depth = 2.7;	// normal M3 hex nut exact depth = 2.4, nyloc = 4
+
+// 5.6, 2.7 was too tight:
+m3_nut_flats = 6.6;	// normal M3 hex nut exact width = 5.5, m4 is about 7
+
+// 2.7 was too tight:
+m3_nut_depth = 3.7;	// normal M3 hex nut exact depth = 2.4, nyloc = 4
 
 retainer = 0;		// Belt retainer above teeth, 0 = No, 1 = Yes
 retainer_ht = 1.5;	// height of retainer flange over pulley, standard = 1.5
 idler = 0;			// Belt retainer below teeth, 0 = No, 1 = Yes
 idler_ht = 1.5;		// height of idler flange over pulley, standard = 1.5
 
-pulley_t_ht = 80;	// length of toothed part of pulley, standard = 12
+pulley_t_ht = 5;	// length of toothed part of pulley, standard = 12
 pulley_b_ht = 8;		// pulley base height, standard = 8. Set to same as idler_ht if you want an idler but no pulley.
 pulley_b_dia = 21;	// pulley base diameter, standard = 20
 no_of_nuts = 1;		// number of captive nuts required, standard = 1
@@ -286,7 +291,8 @@ module GT2_5mm()
 
 
 // idler nub
-translate([0,0,motor_shaft_length])
-  cylinder(r=axel_radius, h=axel_length + idler_ht + pulley_t_ht + pulley_b_ht - motor_shaft_length);
-
+if (axel) {
+  translate([0,0,motor_shaft_length])
+    cylinder(r=axel_radius, h=axel_length + idler_ht + pulley_t_ht + pulley_b_ht - motor_shaft_length);
+}
 
